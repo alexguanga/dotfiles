@@ -17,6 +17,11 @@
 !.local/
 .local/*
 !.local/bin/
+# Exclude binary executables and symlinks from .local/bin
+.local/bin/mise
+.local/bin/uv
+.local/bin/uvx
+.local/bin/poetry
 
 # Track specific config directories
 !.config/

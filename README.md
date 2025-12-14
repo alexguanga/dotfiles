@@ -4,8 +4,14 @@ Personal development environment configuration files managed with a bare Git rep
 
 ## Quick Setup
 
+**One-line installation:**
 ```bash
-git clone --bare https://github.com/yourusername/dotfiles.git $HOME/.dotfiles
+curl -fsSL https://raw.githubusercontent.com/alexguanga/dotfiles/main/.local/bin/setup-machine | bash
+```
+
+**Manual setup:**
+```bash
+git clone --bare https://github.com/alexguanga/dotfiles.git $HOME/.dotfiles
 alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 dotfiles config --local status.showUntrackedFiles no
 dotfiles checkout
