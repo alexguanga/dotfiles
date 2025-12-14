@@ -34,10 +34,6 @@ dotfiles commit -m "..."  # Commit changes
 dotfiles push            # Push to remote
 ```
 
-## Documentation
-
-See [`dotfiles-setup-guide.md`](./dotfiles-setup-guide.md) for complete setup and usage instructions.
-
 ---
 
 *Powered by bare Git repository approach for simple, transparent dotfiles management.*
