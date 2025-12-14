@@ -21,9 +21,34 @@ mise install && brew bundle
 
 ## What's Included
 
-- **Shell**: Zsh with Zinit plugins, Powerlevel10k theme
-- **Tools**: mise, Homebrew, fzf, zoxide, Google Cloud SDK
-- **Development**: Modern shell environment with smart completions
+### Languages & Runtimes (mise)
+- **Node.js** (latest), **Python** (3.11.12), **Go** (latest)
+- **Package managers**: poetry, uv
+
+### Cloud & Infrastructure (mise)
+- **Kubernetes**: kubectl, helm
+- **Infrastructure**: terraform
+- **GitHub**: gh CLI
+
+### Development Tools (Homebrew)
+- **Editors**: vim, neovim
+- **Terminal**: tmux, k9s, kubie
+- **Git**: hub, tig, diff-so-fancy
+- **Search**: fzf, the_silver_searcher
+- **File tools**: exa, bat, dust, duf
+- **Databases**: pgcli, pspg
+- **System**: readline, gnu-getopt, zsh
+- **Monitoring**: bpytop, vivid
+- **Other**: chezmoi, hasura-cli, antibody
+
+### Applications (Homebrew Casks)
+- **Docker** (containerization)
+- **StrongDM** (secure access)
+
+### Shell Environment
+- **Zsh** with Powerlevel10k theme
+- **Modern CLI tools** and smart completions
+- **Automated development tasks** via mise
 
 ## Management
 
