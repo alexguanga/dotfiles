@@ -1,0 +1,66 @@
+# Dotfiles .gitignore
+# Only track specific dotfiles, ignore everything else by default
+
+# Ignore all files by default
+/*
+
+# But track specific dotfiles
+!.gitignore
+!.zshrc
+!.zshenv
+!.profile
+!.p10k.zsh
+!.vimrc
+!.gitconfig
+!.Brewfile
+!README.md
+!.local/
+.local/*
+!.local/bin/
+
+# Track specific config directories
+!.config/
+.config/*
+!.config/git/
+!.config/iterm2/
+!.config/tmux/
+.config/tmux/plugins/
+!.config/nvim/
+!.config/mise/
+!.config/pgcli/
+!.config/alacritty/
+!.config/k9s/
+
+# Track SSH config (but not private keys)
+!.ssh/
+.ssh/*
+!.ssh/config
+
+# Ignore sensitive files
+.env
+.env.local
+.ssh/id_*
+.ssh/known_hosts
+.aws/credentials
+.docker/
+
+# Ignore logs and cache
+*.log
+.cache/
+.tmp/
+.DS_Store
+.zsh_history
+.bash_history
+
+# Ignore package manager files
+node_modules/
+.npm/
+.yarn/
+__pycache__/
+.venv/
+
+# Ignore IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
