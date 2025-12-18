@@ -112,6 +112,22 @@ install_packages() {
     else
         log_warning "⚠️  mise not found, skipping tool installation"
     fi
+
+    log_info "📦 Installing global npm packages..."
+    if [[ -f "$HOME/.local/bin/npm-global-install" ]]; then
+        "$HOME/.local/bin/npm-global-install"
+        log_success "✅ Global npm packages installed"
+    else
+        log_warning "⚠️  npm-global-install script not found"
+    fi
+
+    log_info "🐍 Installing pipx packages..."
+    if [[ -f "$HOME/.local/bin/pipx-install" ]]; then
+        "$HOME/.local/bin/pipx-install"
+        log_success "✅ pipx packages installed"
+    else
+        log_warning "⚠️  pipx-install script not found"
+    fi
 }
 
 setup_ssh_permissions() {
