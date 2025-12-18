@@ -1,21 +1,14 @@
 [tools]
-# Language runtimes
+# Language runtimes (mise strength: version management)
 node = "latest"
 python = "3.11.12"
-go = "latest"
 
 # Package managers
 poetry = "1.2.1"
 uv = "latest"
 
-# Cloud & Infrastructure
-kubectl = "latest"
-helm = "latest"
-terraform = "latest"
-
-# Development tools
-git = "latest"
-gh = "latest"
+# Note: Cloud tools (kubectl, helm, terraform) managed by Google Cloud SDK and Homebrew
+# Note: Development tools (git, gh, go) managed by Homebrew for system-wide availability
 
 [tasks]
 # Common development tasks
@@ -40,4 +33,4 @@ status = "git status"
 # Automatically install tools when entering directories with .tool-versions
 auto_install = true
 # Show which tools are being loaded
-verbose = true
+verbose = false

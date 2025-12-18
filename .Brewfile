@@ -13,8 +13,6 @@ tap "txn2/tap"
 brew "adr-tools"
 # Shell plugin manager
 brew "antibody"
-# Extendable version manager with support for Ruby, Node.js, Erlang & more
-brew "asdf"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
 # Clone of cat(1) with syntax highlighting and Git integration
@@ -25,8 +23,6 @@ brew "xz"
 brew "python@3.10"
 # Linux/OSX/FreeBSD resource monitor
 brew "bpytop"
-# Manage your dotfiles across multiple diverse machines, securely
-brew "chezmoi"
 # Test your configuration files using Open Policy Agent
 brew "conftest"
 # Good-lookin' diffs with diff-highlight and more
@@ -87,10 +83,6 @@ brew "python@3.12"
 brew "sqlparse"
 # CLI for Postgres with auto-completion and syntax highlighting
 brew "pgcli"
-# Execute binaries from Python packages in isolated environments
-brew "pipx"
-# Python package management tool
-brew "poetry"
 # Unix pager optimized for psql
 brew "pspg"
 # Interpreted, interactive, object-oriented programming language
