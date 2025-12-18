@@ -1,0 +1,23 @@
+#!/bin/bash
+# Install global npm packages tracked in dotfiles
+
+set -e
+
+# Global npm packages to install
+packages=(
+    "@anthropic-ai/claude-code"
+    "@graphql-inspector/cli"
+    "neovim"
+    "npm-merge-driver"
+    "prettier"
+    "typescript"
+)
+
+echo "🔧 Installing global npm packages..."
+
+for package in "${packages[@]}"; do
+    echo "Installing $package..."
+    npm install -g "$package"
+done
+
+echo "✅ Global npm packages installed!"
