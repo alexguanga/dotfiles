@@ -22,9 +22,10 @@ k9s:
         active: all
         lockFavorites: false
         favorites:
+        - all
         - default
       view:
-        active: ingestinfrastructure
+        active: targettabledefinitionspackage
       featureGates:
         nodeShell: false
       shellPod:

@@ -15,7 +15,7 @@ log_warning() { echo -e "${YELLOW}[WARNING]${NC} $1"; }
 log_error() { echo -e "${RED}[ERROR]${NC} $1"; }
 
 # Configuration
-DOTFILES_REPO="${DOTFILES_REPO:-git@github.com:alexguanga/dotfiles.git}"
+DOTFILES_REPO="${DOTFILES_REPO:-https://github.com/alexguanga/dotfiles.git}"
 DOTFILES_DIR="$HOME/.dotfiles"
 
 main() {
@@ -53,14 +53,25 @@ install_homebrew() {
     fi
 
     log_info "📦 Installing Homebrew..."
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    if ! /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"; then
+        log_error "Failed to install Homebrew"
+        exit 1
+    fi
 
     # Add Homebrew to PATH for Apple Silicon Macs
     if [[ -f "/opt/homebrew/bin/brew" ]]; then
         eval "$(/opt/homebrew/bin/brew shellenv)"
+    elif [[ -f "/usr/local/bin/brew" ]]; then
+        eval "$(/usr/local/bin/brew shellenv)"
     fi
 
-    log_success "✅ Homebrew installed"
+    # Verify Homebrew is working
+    if ! command -v brew >/dev/null 2>&1; then
+        log_error "Homebrew installation failed - brew command not found"
+        exit 1
+    fi
+
+    log_success "✅ Homebrew installed and verified"
 }
 
 setup_dotfiles() {
